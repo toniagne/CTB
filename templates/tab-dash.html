@@ -1,0 +1,32 @@
+  <ion-nav-bar class="bar-dark" >
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+       <ion-nav-buttons side="right">
+          <a href="#/tab/account">
+           <img src="img/logomenu.png" width="30%" >
+          </a>
+       </ion-nav-buttons>    
+      
+    </ion-nav-bar>
+
+<ion-view view-title="Bem Vindo" >
+  <ion-content class="padding">
+
+    <section class="module">
+      <section class="wraper">    
+        <figure class='{{ajeitaSmall($index + 1)}}' ng-repeat="noticia in dataSet">
+          <a href="">
+            <img ng-src="http://{{converte(noticia.content)}}" alt="" width='{{ajeitaWidth($index + 1)}}' height='{{ajeitaHeight($index + 1)}}'>
+          </a>
+          <figcaption class="transition-050 opacity85">
+            <a href="">
+              <strong class="text transition-060 title">{{noticia.title}}</strong>
+              <span class="text transition-050 desc"> </span>
+            </a>
+          </figcaption>
+        </figure> 
+      </section>
+    </section>
+
+  </ion-content>
+</ion-view>

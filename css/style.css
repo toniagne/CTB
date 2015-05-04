@@ -1,0 +1,115 @@
+/* Transitions */
+.transition-050 {
+  -moz-transition: 0.50s;
+  -webkit-transition: 0.50s;
+  -ms-transition: 0.50s;
+  -o-transition: 0.50s;
+  transition: 0.50s;
+}
+.opacity85{ 
+  opacity: 0.85; 
+  filter: alpha(opacity=85); 
+}
+body { background-color:#333; color:#eee}
+.wraper {
+	-webkit-filter: invert(.1);
+    filter: invert(.1);
+}
+.module { max-width: 500px; margin:auto; }
+.module figure {
+  position: relative;
+  overflow: hidden;
+  border:0px solid #fff;
+}
+.module .small {
+  float: left;
+  width: 50%;
+}
+.module .small2 {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.module .small3 {
+  float: left;
+  width: 33%;
+  padding: 5px;
+}
+.module figure img {
+  display: block;
+  max-width: 100%;
+}
+.module figcaption {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  max-height: 27px;
+}
+.module .text {
+  color: #7A8B8B;
+  background-color: #fff;
+  font-size:0.90em;
+}
+.module figure:hover figcaption { max-height: 100%;}
+.module figure:hover figcaption .text {
+  background-color: #7A8B8B;
+  color:#fff;
+}
+.module figcaption a { display: block; text-decoration:none; }
+.module .title {
+  display: inline-block;
+  padding: 5px;
+  text-transform:uppercase;  
+}
+.module .desc {
+  display: block;
+  padding: 15px;
+}
+.bgcolor {
+  background-color: #fff;
+}
+ 
+ #footer{position:fixed;
+            left:0px;
+            bottom:0px;
+            height:80px;
+            width:100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #000000;  }
+
+.pane {
+    background-color: #333;
+}
+
+.texto {
+  color: #373435;
+}
+
+.bar.bar-dark {
+  border-style: none;
+  background-color: rgba(255,255,255,.05) !important;
+}
+.bar.bar-conheca {
+  border-style: none;
+  background-color: rgba(255,255,255,.05) !important;
+  background-image: url("../img/fundo-conheca.png") !important;  
+  background-size: 100% 100%  !important;
+}
+.bar.bar-estaduais {
+  border-style: none;
+  background-color: rgba(255,255,255,.05) !important;
+  background-image: url("../img/fundo-estaduais.png") !important;  
+  background-size: 100% 100%  !important;
+}
+
+.item.item-divider {
+  background-color: #F58634 !important;
+}
+
+.tabs {
+  visibility: hidden;
+  border-style: none;
+  background-color: rgba(255,255,255,.05) !important;
+
+}
