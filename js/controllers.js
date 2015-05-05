@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $http, FeedService, $location) {
+.controller('DashCtrl', function($scope, $http, FeedService, $location, $ionicLoading) {
 
 	        $scope.converte = function(variavel) {
             var str_1 = variavel.split("http://");
@@ -10,19 +10,31 @@ angular.module('starter.controllers', [])
           }
 
           $scope.ajeitaSmall = function(variavel) {
-             if (variavel % 2 == 0) {return "small";}else { return ""; }             
+           if (variavel == "sim") {return "small4";} else { return "small"; }             
           }
            $scope.ajeitaWidth = function(variavel) {
-             if (variavel % 2 == 0) {return "";}else { return "500"; }             
+             if (variavel == "sim") {return "500";}else { return "225"; }             
           }
            $scope.ajeitaHeight = function(variavel) {
-             if (variavel % 2 == 0) {return "";}else { return ""; }             
+             if (variavel == "sim") {return "225";}else { return "155"; }             
           }
+  $ionicLoading.show({
+    content: 'Loading',
+    animation: 'fade-in',
+    showBackdrop: true,
+    maxWidth: 200,
+    showDelay: 0
+  });
+        $http.get('http://www.renies.com.br/ddd37/gerenciador/listagens/leitorrss/')
+               .success(function(data) {
+                      $ionicLoading.hide();
+                })
+               .then(        
+                function(res){ 
+                  $scope.noticias  = res.data;              
+                });     
 
-        FeedService.parseFeed('http://portalctb.org.br/site/noticias-editorias.feed?type=rss').then(function(res){ 
-            $scope.n = 0;       
-            $scope.dataSet=res.data.responseData.feed.entries;
-        });
+         
         $scope.go = function(path){
          console.log(path);
           $location.url('#/tab'+path);
@@ -42,7 +54,17 @@ angular.module('starter.controllers', [])
    
 })
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+    var itens = $stateParams.iditem.split("*");
+          
+        var detalheContato = [
+                                {
+                                     
+                                    "imagem": itens[0], 
+                                    "titulo": itens[1]
+                                },
+                             ];    
+
+  $scope.chat = detalheContato[0];
 })
 
 .controller('AccountCtrl', function($scope) {

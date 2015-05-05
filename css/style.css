@@ -35,6 +35,10 @@ body { background-color:#333; color:#eee}
   width: 33%;
   padding: 5px;
 }
+.module .small4 {
+  float: left;
+  width: 100%; 
+}
 .module figure img {
   display: block;
   max-width: 100%;
@@ -45,8 +49,10 @@ body { background-color:#333; color:#eee}
   width: 100%;
   max-height: 27px;
 }
+
+
 .module .text {
-  color: #7A8B8B;
+  color: #000000;
   background-color: #fff;
   font-size:0.90em;
 }

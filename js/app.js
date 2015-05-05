@@ -48,15 +48,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
+.state('tab.dash-vernoticia', {
+    url: '/dash/vernoticia/:iditem',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/vernoticia.html',
+        controller: 'ChatDetailCtrl'
       }
-    })
+    }
+  })
 
 
     .state('tab.account-detail', {
@@ -64,7 +64,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-detail.html',
-          controller: 'ChatDetailCtrl'
+          controller: 'Principal'
         }
       }
     })
@@ -73,7 +73,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-estaduais.html',
-          controller: 'ChatDetailCtrl'
+          controller: 'Principal'
         }
       }
     })
@@ -82,7 +82,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-downloads.html',
-          controller: 'ChatDetailCtrl'
+          controller: 'Principal'
         }
       }
     })
@@ -91,7 +91,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-secretarias.html',
-          controller: 'ChatDetailCtrl'
+          controller: 'Principal'
         }
       }
     })
@@ -100,7 +100,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-contato.html',
-          controller: 'ChatDetailCtrl'
+          controller: 'Principal'
         }
       }
     })

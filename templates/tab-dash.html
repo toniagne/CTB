@@ -10,19 +10,21 @@
     </ion-nav-bar>
 
 <ion-view view-title="Bem Vindo" >
-  <ion-content class="padding">
+  <ion-content >
 
+  
     <section class="module">
       <section class="wraper">    
-        <figure class='{{ajeitaSmall($index + 1)}}' ng-repeat="noticia in dataSet">
-          <a href="">
-            <img ng-src="http://{{converte(noticia.content)}}" alt="" width='{{ajeitaWidth($index + 1)}}' height='{{ajeitaHeight($index + 1)}}'>
+        <figure  ng-repeat="noticia in noticias" class='{{ajeitaSmall(noticia.numero)}}'>
+          <a href="#/tab/dash/vernoticia/{{noticia.titulo}}">
+            <img ng-src="http://{{noticia.img}}" alt="" width='{{ajeitaWidth(noticia.numero)}}' height='{{ajeitaHeight(noticia.numero)}}'>
           </a>
-          <figcaption class="transition-050 opacity85">
-            <a href="">
-              <strong class="text transition-060 title">{{noticia.title}}</strong>
-              <span class="text transition-050 desc"> </span>
-            </a>
+
+          <figcaption>
+             
+              <strong class="text transition-060 title">{{noticia.titulo}}</strong>
+              <span class="text transition-050 desc">{{noticia.categoria}}</span>
+             
           </figcaption>
         </figure> 
       </section>
