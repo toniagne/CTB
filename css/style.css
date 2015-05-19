@@ -119,3 +119,18 @@ body { background-color:#333; color:#eee}
   background-color: rgba(255,255,255,.05) !important;
 
 }
+
+#mosaico {
+position: relative;
+  width: 50%;  
+  float: left;
+}
+
+#mosaicogrande {
+position: relative;
+  width: 100%;  
+  float: left;
+}
+.icone3{
+  position:absolute; top:110px; left:6px; height:200px;
+}

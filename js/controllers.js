@@ -10,13 +10,13 @@ angular.module('starter.controllers', [])
           }
 
           $scope.ajeitaSmall = function(variavel) {
-           if (variavel == "sim") {return "small4";} else { return "small"; }             
+           if (variavel == "sim") {return "mosaicogrande";} else { return "mosaico"; }             
           }
            $scope.ajeitaWidth = function(variavel) {
-             if (variavel == "sim") {return "500";}else { return "225"; }             
+             if (variavel == "sim") {return "100%";}else { return "225"; }             
           }
            $scope.ajeitaHeight = function(variavel) {
-             if (variavel == "sim") {return "225";}else { return "155"; }             
+             if (variavel == "sim") {return "50%";}else { return "155"; }             
           }
   $ionicLoading.show({
     content: 'Loading',
@@ -54,17 +54,7 @@ angular.module('starter.controllers', [])
    
 })
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-    var itens = $stateParams.iditem.split("*");
-          
-        var detalheContato = [
-                                {
-                                     
-                                    "imagem": itens[0], 
-                                    "titulo": itens[1]
-                                },
-                             ];    
-
-  $scope.chat = detalheContato[0];
+   
 })
 
 .controller('AccountCtrl', function($scope) {

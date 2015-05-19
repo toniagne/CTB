@@ -1,4 +1,4 @@
-  <ion-nav-bar class="bar-dark" >
+    <ion-nav-bar class="bar-dark" >
       <ion-nav-back-button>
       </ion-nav-back-button>
        <ion-nav-buttons side="right">
@@ -11,24 +11,27 @@
 
 <ion-view view-title="Bem Vindo" >
   <ion-content >
+    <Br><Br>
+    <div class="row">
+      <div class="col">
+
+
+
+         <div  ng-repeat="noticia in noticias" id="{{ajeitaSmall(noticia.numero)}}">
+          <a href="#/tab/dash/vernoticia"><img ng-src="http://{{noticia.img}}" width="100%"></a>
+          <div class="icone3"> 
+              <div class="row responsive-sm" >
+                <div class="col" style="background-color: rgba(0,0,0,.80); width: 100%">{{noticia.titulo}}</div>
+              </div> 
+          </div>
+        </div>
+      
+      </div>
+    </div>
+
+
 
   
-    <section class="module">
-      <section class="wraper">    
-        <figure  ng-repeat="noticia in noticias" class='{{ajeitaSmall(noticia.numero)}}'>
-          <a href="#/tab/dash/vernoticia/{{noticia.titulo}}">
-            <img ng-src="http://{{noticia.img}}" alt="" width='{{ajeitaWidth(noticia.numero)}}' height='{{ajeitaHeight(noticia.numero)}}'>
-          </a>
-
-          <figcaption>
-             
-              <strong class="text transition-060 title">{{noticia.titulo}}</strong>
-              <span class="text transition-050 desc">{{noticia.categoria}}</span>
-             
-          </figcaption>
-        </figure> 
-      </section>
-    </section>
 
   </ion-content>
 </ion-view>
