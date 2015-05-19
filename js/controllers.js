@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $http, FeedService, $location, $ionicLoading) {
+.controller('DashCtrl', function($scope, $http, FeedService, $location, $ionicLoading, $ionicPopup) {
 
 	        $scope.converte = function(variavel) {
             var str_1 = variavel.split("http://");
@@ -28,6 +28,13 @@ angular.module('starter.controllers', [])
         $http.get('http://www.renies.com.br/ddd37/gerenciador/listagens/leitorrss/')
                .success(function(data) {
                       $ionicLoading.hide();
+                })
+               .error(function(data) {
+                      $ionicLoading.hide();
+                  return $ionicPopup.alert({
+                       title: 'ATENÇÃO.',
+                       template: 'Seu dispositivo não esta conectado na internet.'
+                     });
                 })
                .then(        
                 function(res){ 
