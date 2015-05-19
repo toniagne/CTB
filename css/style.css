@@ -113,6 +113,10 @@ body { background-color:#333; color:#eee}
   background-color: #F58634 !important;
 }
 
+.item.item-divider2 {
+  background-color: #EE6E6E !important;
+}
+
 .tabs {
   visibility: hidden;
   border-style: none;
