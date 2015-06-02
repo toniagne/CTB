@@ -112,7 +112,21 @@ body { background-color:#333; color:#eee}
 .item.item-divider {
   background-color: #F58634 !important;
 }
+<<<<<<< HEAD
  
+=======
+
+.item.item-divider2 {
+  background-color: #EE6E6E !important;
+}
+
+.tabs {
+  visibility: hidden;
+  border-style: none;
+  background-color: rgba(255,255,255,.05) !important;
+
+}
+>>>>>>> origin/Inicial
 
 #mosaico {
 position: relative;
