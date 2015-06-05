@@ -2,6 +2,9 @@ angular.module('starter.controllers', ['ionic'])
 
 .controller('DashCtrl', function($scope, $http, FeedService, $location, $ionicLoading, $ionicPopup) {
 
+ 
+
+
 	        $scope.converte = function(variavel) {
             var str_1 = variavel.split("http://");
             if (!str_1[1]) { var str_2 = "";  } else { var str_2 = str_1[1].split('"');}
