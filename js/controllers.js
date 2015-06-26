@@ -28,7 +28,7 @@ angular.module('starter.controllers', ['ionic'])
     maxWidth: 200,
     showDelay: 0
   });
-        $http.get('http://www.renies.com.br/ddd37/gerenciador/listagens/leitorrss/')
+        $http.get('http://portalctb.org.br/mobile/backend/ctb/noticias')
                .success(function(data) {
                       $ionicLoading.hide();
                 })
@@ -64,7 +64,7 @@ angular.module('starter.controllers', ['ionic'])
    
 })
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-   
+   $scope.chat = Chats.get($stateParams.idNoticia);
 })
 
 .controller('AccountCtrl', function($scope) {

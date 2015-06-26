@@ -49,7 +49,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
 .state('tab.dash-vernoticia', {
-    url: '/dash/vernoticia',
+    url: '/dash/vernoticia/:idNoticia',
     views: {
       'tab-dash': {
         templateUrl: 'templates/vernoticia.html',
