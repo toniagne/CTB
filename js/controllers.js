@@ -1,6 +1,6 @@
 angular.module('starter.controllers', ['ionic'])
 
-.controller('DashCtrl', function($scope, $http, FeedService, $location, $ionicLoading, $ionicPopup) {
+.controller('DashCtrl', function($scope, $http,  $location, $ionicLoading, $ionicPopup) {
 
  
 
