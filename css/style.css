@@ -10,7 +10,7 @@
   opacity: 0.85; 
   filter: alpha(opacity=85); 
 }
-body { background-color:#333; color:#eee}
+body { background-color:#333;}
 .wraper {
 	-webkit-filter: invert(.1);
     filter: invert(.1);

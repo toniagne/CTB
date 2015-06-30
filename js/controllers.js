@@ -28,7 +28,16 @@ angular.module('starter.controllers', ['ionic'])
     maxWidth: 200,
     showDelay: 0
   });
-        $http.get('http://portalctb.org.br/mobile/backend/ctb/noticias')
+
+  var headers = {
+        'Access-Control-Allow-Origin' : '*',
+        'Access-Control-Allow-Methods' : 'POST, GET, OPTIONS, PUT',
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      };
+
+
+        $http.get('noticiasnacionais.json')
                .success(function(data) {
                       $ionicLoading.hide();
                 })
@@ -64,6 +73,8 @@ angular.module('starter.controllers', ['ionic'])
    
 })
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+  console.log(Chats.get($stateParams.idNoticia));
+
    $scope.chat = Chats.get($stateParams.idNoticia);
 })
 

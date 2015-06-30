@@ -21,12 +21,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(['$httpProvider',function ($httpProvider) {
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+ }]) 
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
+.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        $httpProvider.defaults.headers.common = 'Content-Type: application/json';
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
+  
   $stateProvider
 
   // setup an abstract state for the tabs directive
@@ -104,6 +109,44 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+
+    .state('tab.account-principios', {
+      url: '/account/principios',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/account-principios.html',
+          controller: 'Principal'
+        }
+      }
+    })
+    .state('tab.account-plano', {
+      url: '/account/plano',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/account-plano.html',
+          controller: 'Principal'
+        }
+      }
+    })
+    .state('tab.account-filiacao', {
+      url: '/account/filiacao',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/account-filiacao.html',
+          controller: 'Principal'
+        }
+      }
+    })
+    .state('tab.account-direcao', {
+      url: '/account/direcao',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/account-direcao.html',
+          controller: 'Principal'
+        }
+      }
+    })
+
 
   .state('tab.principal', {
       url: '/principal',
