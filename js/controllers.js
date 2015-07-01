@@ -90,7 +90,9 @@ angular.module('starter.controllers', ['ionic'])
    
 })
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
- 
+  $scope.chat = Chats.get($stateParams.idNoticia);
+
+
 })
 
 .controller('AccountCtrl', function($scope) {

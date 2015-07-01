@@ -25,14 +25,15 @@ angular.module('starter.services', [])
     },
 
     get: function(chatId) {
-
-      console.log(chats.$$state.value);
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
-        }
-      }
-      return null;
+      var itens = chatId.split("*"); 
+                             var detalheContato = [
+                                {
+                                    "id": itens[0], 
+                                    "strNome": itens[1], 
+                                    "categoria": itens[2]
+                                  },
+                             ];         
+                        return detalheContato[0];    
 
     }
   };
