@@ -1,7 +1,7 @@
 angular.module('starter.controllers', ['ionic'])
 
 <<<<<<< HEAD
-.controller('ListaNoticias', function($scope, $http, FeedService, $location, $ionicLoading, $ionicPopup) {
+.controller('ListaNoticias', function($scope, $http, $location, $ionicLoading, $ionicPopup) {
 =======
 .controller('DashCtrl', function($scope, $http,  $location, $ionicLoading, $ionicPopup) {
 >>>>>>> origin/Inicial
