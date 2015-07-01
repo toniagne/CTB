@@ -47,11 +47,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
 .state('tab.dash-vernoticia', {
-    url: '/dash/vernoticia/:idNoticia',
+    url: '/dash/vernoticia/:idNoticia/:tiponoticia',
     views: {
       'tab-dash': {
         templateUrl: 'templates/vernoticia.html',
         controller: 'ChatDetailCtrl'
+      }
+    }
+  })
+
+.state('tab.dash-listanoticias', {
+    url: '/dash/listanoticias/:idNoticia',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tab-dash.html',
+        controller: 'ListaNoticias'
       }
     }
   })

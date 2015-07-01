@@ -10,7 +10,18 @@
   opacity: 0.85; 
   filter: alpha(opacity=85); 
 }
+<<<<<<< HEAD
+ .fundodegrade {  
+            margin-top: -20%; width: 100%; height: 60px;
+            position: absolute; 
+            background-image: url("../img/fundo.png");  background-size: 100% 100%;
+             
+ }
+
+ body { background-color:#333; color:#eee}
+=======
 body { background-color:#333;}
+>>>>>>> origin/Inicial
 .wraper {
 	-webkit-filter: invert(.1);
     filter: invert(.1);

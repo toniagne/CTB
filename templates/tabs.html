@@ -4,7 +4,10 @@ Each tab's child <ion-nav-view> directive will have its own
 navigation history that also transitions its views in and out.
 -->
 
- 
+<ion-side-menus delegate-handle="sideMenu">
+    <ion-side-menu-content>
+
+
     <ion-nav-bar class="bar-dark" >
       <ion-nav-back-button>
       </ion-nav-back-button>
@@ -15,6 +18,11 @@ navigation history that also transitions its views in and out.
        </ion-nav-buttons>    
       
     </ion-nav-bar>
+
+     
+ 
+
+
 <ion-tabs class="tabs-positive tabs-top tabs-icon-only slide-left-right tabs-item-hide">
 
   <!-- Dashboard Tab -->
@@ -31,4 +39,22 @@ navigation history that also transitions its views in and out.
 
 </ion-tabs>
 
- 
+
+
+    </ion-side-menu-content>
+
+    <!-- Left menu -->
+    <ion-side-menu side="left">
+     
+        <ion-list>
+            <ion-item nav-clear menu-close href="#/tab/listanoticias/135">BRASIL</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/listanoticias/91">INTERNACIONAL</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/listanoticias/181">PELOS ESTADOS</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/listanoticias/213">SECRETARIAS</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/listanoticias/136">CULTURA & MIDIA</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/listanoticias/6">OPINIÃO</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/listanoticias/99">RURAIS</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/listanoticias/13">VOZ DO CTB</ion-item>
+
+        </ion-list>
+    </ion-side-menu>
