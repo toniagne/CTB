@@ -1,22 +1,12 @@
 angular.module('starter.services', [])
 
  
-
-.factory('Chats', function($http) {
- 
-var obj = {content:null};
-
-   
-
-   var noticiaBrasil = $http.get('data/noticias.json')                  
-=======
- 
 .factory('Chats', function($http) {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
    var chats = $http.get('noticiasnacionais.json')                  
->>>>>>> origin/Inicial
+
                   .then(        
                       function(res){   
                         var retorno = [];
@@ -33,19 +23,7 @@ var obj = {content:null};
     remove: function(chat) {
       chats.splice(chats.indexOf(chat), 1);
     },
-<<<<<<< HEAD
-    get: function(text, tiponoticia) {
-           var results = []; 
-           var noticiaInternacionais = $http.get('data/noticias.json')                  
-                  .then(        
-                      function(res){    
-                         var conteudo = res.data;
-                             
-                            console.log(text);
-                            return conteudo; 
-                       });   
-              
-=======
+
     get: function(chatId) {
 
       console.log(chats.$$state.value);
@@ -55,7 +33,7 @@ var obj = {content:null};
         }
       }
       return null;
->>>>>>> origin/Inicial
+
     }
   };
 });
