@@ -27,10 +27,11 @@ angular.module('starter.services', [])
     get: function(chatId) {
       var itens = chatId.split("*"); 
       var str = itens[4].replace(/°/g, "/");   
+      var str2 = itens[1].replace(/@/g, "?");   
                              var detalheContato = [
                                 {
                                     "id": itens[0], 
-                                    "strNome": itens[1], 
+                                    "strNome": str2, 
                                     "categoria": itens[2],
                                     "conteudo": itens[3],
                                     "imagem": str
