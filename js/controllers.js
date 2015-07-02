@@ -27,10 +27,10 @@ angular.module('starter.controllers', ['ionic'])
                 })
                .then(        
                 function(res){ 
-                   $scope.noticias2  = res.data;              
-                });  
-                console.log($scope.noticias2);
+                   return $scope.noticias2  = res.data;              
+                });   
           }
+
 
 	        $scope.converte = function(variavel) {
             var str_1 = variavel.split("http://");
@@ -91,6 +91,35 @@ angular.module('starter.controllers', ['ionic'])
 .controller('Principal', function($scope, $stateParams, Chats) {
    
 })
+
+.controller('ListaNoticias', function($scope, $stateParams, Chats, $http, $ionicPopup, $ionicLoading) {
+    $ionicLoading.show({
+    content: 'Loading',
+    animation: 'fade-in',
+    showBackdrop: true,
+    maxWidth: 200,
+    showDelay: 0
+  });
+    
+   $http.get('http://www.ctb.org.br/mobile/backend/ctb/noticiasselecionada/'+$stateParams.idNoticia)
+               .success(function(data) {
+                      $ionicLoading.hide();
+                })
+               .error(function(data) {
+                      $ionicLoading.hide();
+                  return $ionicPopup.alert({
+                       title: 'ATENÇÃO.',
+                       template: 'Seu dispositivo não esta conectado na internet.'
+                     });
+                })
+               .then(        
+                function(res){ 
+                  $scope.noticias2  = res.data;              
+                });  
+ 
+})
+
+
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.idNoticia);
 

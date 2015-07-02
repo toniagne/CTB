@@ -7,10 +7,11 @@
                   CATEGORIAS
                 </button>
             </ion-nav-buttons>
-  <ion-content > 
+  <ion-content >
+ 
        <div class="row unlimited-items">  
 
-          <div class="col" ng-repeat="noticia in noticias" style="width:{{noticia.tamanho}}; height:{{noticia.altura}};">
+          <div class="col" ng-repeat="noticia in noticias2" style="width:{{noticia.tamanho}}; height:{{noticia.altura}};">
             <a href="#/tab/dash/vernoticia/{{noticia.id}}*{{noticia.strNome}}*{{noticia.catId}}*{{noticia.conteudo}}*{{noticia.imagemvis}}">
               <img ng-src="http://portalctb.org.br/site/{{noticia.imagem}}" width="100%" height="100%">
             </a> 

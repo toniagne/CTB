@@ -4,57 +4,46 @@ Each tab's child <ion-nav-view> directive will have its own
 navigation history that also transitions its views in and out.
 -->
 
-<ion-side-menus delegate-handle="sideMenu" ng-controller="DashCtrl">
+<ion-side-menus delegate-handle="sideMenu">
     <ion-side-menu-content>
+        <ion-nav-bar class="bar-dark" >
+          <ion-nav-back-button>
+          </ion-nav-back-button>
+           <ion-nav-buttons side="right">
+              <a href="#/tab/account">
+               <img src="img/logomenu.png" width="100%" style="margin-right:-150px;">
+              </a>
+           </ion-nav-buttons>  
+        </ion-nav-bar>
 
-
-    <ion-nav-bar class="bar-dark" >
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-       <ion-nav-buttons side="right">
-          <a href="#/tab/account">
-           <img src="img/logomenu.png" width="100%" style="margin-right:-150px;">
-          </a>
-       </ion-nav-buttons>    
-      
-    </ion-nav-bar>
-
-     
- 
-
-
-<ion-tabs class="tabs-positive tabs-top tabs-icon-only slide-left-right tabs-item-hide">
-
-  <!-- Dashboard Tab -->
-  <ion-tab title="Notícias" icon-off="ion-ios-bookmarks-outline" icon-on="ion-ios-bookmarks" href="#/tab/dash">
-    <ion-nav-view name="tab-dash"></ion-nav-view>
-  </ion-tab>
- 
-
-  <!-- Account Tab -->
-  <ion-tab title="Principal" icon-off="ion-ios-albums-outline" icon-on="ion-ios-albums" href="#/tab/account">
-    <ion-nav-view name="tab-account"></ion-nav-view>
-  </ion-tab>
-
-
-</ion-tabs>
-
-
-
+        <ion-tabs class="tabs-positive tabs-top tabs-icon-only slide-left-right tabs-item-hide">
+          <ion-tab title="Notícias" icon-off="ion-ios-bookmarks-outline" icon-on="ion-ios-bookmarks" href="#/tab/dash">
+            <ion-nav-view name="tab-dash"></ion-nav-view>
+          </ion-tab>
+          <ion-tab title="Principal" icon-off="ion-ios-albums-outline" icon-on="ion-ios-albums" href="#/tab/account">
+            <ion-nav-view name="tab-account"></ion-nav-view>
+          </ion-tab>
+        </ion-tabs>
     </ion-side-menu-content>
 
+    <ion-side-menu side="left">
+          <ion-header-bar class="bar-black">
+            <h1 class="title">Editoriais</h1>
+          </ion-header-bar>
+          <ion-content>
+          <ion-list>
+            <ion-item nav-clear menu-close href="#/tab/dash/listanoticias/135">BRASIL</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/dash/listanoticias/91">INTERNACIONAL</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/dash/listanoticias/181">PELOS ESTADOS</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/dash/listanoticias/213">SECRETARIAS</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/dash/listanoticias/136">CULTURA & MIDIA</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/dash/listanoticias/6">OPINIÃO</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/dash/listanoticias/99">RURAIS</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/dash/listanoticias/13">VOZ DO CTB</ion-item> 
+          </ion-list>
+             
+          </ion-content>
+        </ion-side-menu>
+</ion-side-menus>
     <!-- Left menu -->
-    <ion-side-menu side="left" >
      
-        <ion-list>
-            <ion-item nav-clear menu-close ng-click="go(135);">BRASIL</ion-item>
-            <ion-item nav-clear menu-close href="#/tab/listanoticias">INTERNACIONAL</ion-item>
-            <ion-item nav-clear menu-close href="#/tab/listanoticias/181">PELOS ESTADOS</ion-item>
-            <ion-item nav-clear menu-close href="#/tab/listanoticias/213">SECRETARIAS</ion-item>
-            <ion-item nav-clear menu-close href="#/tab/listanoticias/136">CULTURA & MIDIA</ion-item>
-            <ion-item nav-clear menu-close href="#/tab/listanoticias/6">OPINIÃO</ion-item>
-            <ion-item nav-clear menu-close href="#/tab/listanoticias/99">RURAIS</ion-item>
-            <ion-item nav-clear menu-close href="#/tab/listanoticias/13">VOZ DO CTB</ion-item>
-
-        </ion-list>
-    </ion-side-menu>
