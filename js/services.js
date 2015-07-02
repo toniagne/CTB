@@ -30,7 +30,8 @@ angular.module('starter.services', [])
                                 {
                                     "id": itens[0], 
                                     "strNome": itens[1], 
-                                    "categoria": itens[2]
+                                    "categoria": itens[2],
+                                    "conteudo": itens[3]
                                   },
                              ];         
                         return detalheContato[0];    

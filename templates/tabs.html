@@ -4,7 +4,7 @@ Each tab's child <ion-nav-view> directive will have its own
 navigation history that also transitions its views in and out.
 -->
 
-<ion-side-menus delegate-handle="sideMenu">
+<ion-side-menus delegate-handle="sideMenu" ng-controller="DashCtrl">
     <ion-side-menu-content>
 
 
@@ -44,11 +44,11 @@ navigation history that also transitions its views in and out.
     </ion-side-menu-content>
 
     <!-- Left menu -->
-    <ion-side-menu side="left">
+    <ion-side-menu side="left" >
      
         <ion-list>
-            <ion-item nav-clear menu-close href="#/tab/listanoticias/135">BRASIL</ion-item>
-            <ion-item nav-clear menu-close href="#/tab/listanoticias/91">INTERNACIONAL</ion-item>
+            <ion-item nav-clear menu-close ng-click="go(135);">BRASIL</ion-item>
+            <ion-item nav-clear menu-close href="#/tab/listanoticias">INTERNACIONAL</ion-item>
             <ion-item nav-clear menu-close href="#/tab/listanoticias/181">PELOS ESTADOS</ion-item>
             <ion-item nav-clear menu-close href="#/tab/listanoticias/213">SECRETARIAS</ion-item>
             <ion-item nav-clear menu-close href="#/tab/listanoticias/136">CULTURA & MIDIA</ion-item>

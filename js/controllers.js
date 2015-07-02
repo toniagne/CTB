@@ -3,9 +3,9 @@ angular.module('starter.controllers', ['ionic'])
 
 
 .controller('DashCtrl', function($scope, $http, $location, $ionicLoading, $ionicPopup) {
- 
-          $scope.mudanoticia = function(id){
-            console.log('muda');
+         
+          $scope.mudanoticia = function(id){           
+             
             $ionicLoading.show({
               content: 'Loading',
               animation: 'fade-in',
@@ -13,7 +13,8 @@ angular.module('starter.controllers', ['ionic'])
               maxWidth: 200,
               showDelay: 0
             });
-        $http.get('http://www.ctb.org.br/mobile/backend/ctb/noticiasselecionadas/'+id)
+
+        $http.get('http://www.ctb.org.br/mobile/backend/ctb/noticiasselecionada/'+id)
                .success(function(data) {
                       $ionicLoading.hide();
                 })
@@ -26,8 +27,9 @@ angular.module('starter.controllers', ['ionic'])
                 })
                .then(        
                 function(res){ 
-                  $scope.noticias  = res.data;              
+                   $scope.noticias2  = res.data;              
                 });  
+                console.log($scope.noticias2);
           }
 
 	        $scope.converte = function(variavel) {
