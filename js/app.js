@@ -109,10 +109,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-secretarias.html',
-          controller: 'Principal'
+          controller: 'Secretarias'
         }
       }
     })
+    .state('tab.account-secretariasver', {
+      url: '/account/secretarias/:idSecretaria',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/account-secretarias-ver.html',
+          controller: 'Secretariasver'
+        }
+      }
+    })
+
     .state('tab.account-contato', {
       url: '/account/contato',
       views: {

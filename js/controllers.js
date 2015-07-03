@@ -89,6 +89,65 @@ angular.module('starter.controllers', ['ionic'])
 .controller('Principal2', function($scope, $stateParams, Chats, $ionicLoading, $http) {
 })
 
+.controller('Secretarias', function($scope, $stateParams, Chats, $ionicLoading, $http) {
+   $ionicLoading.show({
+    content: 'Loading',
+    animation: 'fade-in',
+    showBackdrop: true,
+    maxWidth: 200,
+    showDelay: 0
+  });
+ 
+  
+    
+   $http.get('http://www.ctb.org.br/mobile/backend/ctb/secretarias/')
+               .success(function(data) {
+                      $ionicLoading.hide();
+                })
+               .error(function(data) {
+                      $ionicLoading.hide();
+                  return $ionicPopup.alert({
+                       title: 'ATENÇÃO.',
+                       template: 'Seu dispositivo não esta conectado na internet.'
+                     });
+                })
+               .then(        
+                function(res){ 
+                  $scope.secretarias  = res.data;              
+                });  
+})
+
+.controller('Secretariasver', function($scope, $http, $stateParams, $location, $ionicLoading, $ionicPopup) {
+         
+               
+             
+            $ionicLoading.show({
+              content: 'Loading',
+              animation: 'fade-in',
+              showBackdrop: true,
+              maxWidth: 200,
+              showDelay: 0
+            });
+
+        $http.get('http://www.ctb.org.br/mobile/backend/ctb/noticiasselecionada/'+$stateParams.idSecretaria)
+               .success(function(data) {
+                      $ionicLoading.hide();
+                })
+               .error(function(data) {
+                      $ionicLoading.hide();
+                  return $ionicPopup.alert({
+                       title: 'ATENÇÃO.',
+                       template: 'Seu dispositivo não esta conectado na internet.'
+                     });
+                })
+               .then(        
+                function(res){ 
+                   return $scope.noticias2  = res.data;              
+                });   
+       
+
+})
+
 .controller('Principal', function($scope, $stateParams, Chats, $ionicLoading, $http) {
     $ionicLoading.show({
     content: 'Loading',
