@@ -20,8 +20,14 @@
       {{chat.conteudo}}
     </p> 
   </div>
-<div class="item tabs tabs-secondary tabs-icon-left">
-    <a class="tab-item" href="#">
+<div class="item tabs tabs-secondary tabs-icon-left"> 
+    <a title="Curta Nosso Link"  class="tab-item"
+      href="http://www.facebook.com/plugins/like.php?href=http://portalctb.org.br/site/noticias/{{chat.categoria}}/{{chat.id}}&amp;
+      layout=standard&amp;
+      show_faces=false&amp;
+      width=450&amp;
+      action=like&amp;
+      colorscheme=light&amp;">
       <i class="icon ion-thumbsup"></i>
       Curtir
     </a>
@@ -29,7 +35,10 @@
       <i class="icon ion-chatbox"></i>
       Comentar
     </a>
-    <a class="tab-item" href="#">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://portalctb.org.br/site/noticias/{{chat.categoria}}/{{chat.id}}&t=CTB MOBILE"
+   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+   target="_blank" title="Compartilhe on Facebook" class="tab-item">
+ 
       <i class="icon ion-share"></i>
       Compartilhar
     </a>
