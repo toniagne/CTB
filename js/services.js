@@ -26,7 +26,7 @@ angular.module('starter.services', [])
 
     get: function(chatId) {
  
-    
+   
 
       var itens = chatId.split("*"); 
       var str = itens[4].replace(/°/g, "/");   
@@ -54,7 +54,7 @@ angular.module('starter.services', [])
       var converttxt19 = converttxt18.replace(/sdot/g, '.');      
       var converttxt20 = converttxt19.substring(1);
       
-
+ console.log(itens);
                              var detalheContato = [
                                 {
                                     "id": itens[0], 
