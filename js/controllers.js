@@ -86,7 +86,8 @@ angular.module('starter.controllers', ['ionic'])
     Chats.remove(chat);
   }
 })
-
+.controller('Principal2', function($scope, $stateParams, Chats, $ionicLoading, $http) {
+})
 
 .controller('Principal', function($scope, $stateParams, Chats, $ionicLoading, $http) {
     $ionicLoading.show({
@@ -96,8 +97,11 @@ angular.module('starter.controllers', ['ionic'])
     maxWidth: 200,
     showDelay: 0
   });
+    var dados = $stateParams.idDocumento;
+    var itens = dados.split("*"); 
+    $scope.linkitem = itens[1];
     
-   $http.get('http://www.ctb.org.br/mobile/backend/ctb/carregadocumentos/'+$stateParams.idDocumento)
+   $http.get('http://www.ctb.org.br/mobile/backend/ctb/carregadocumentos/'+itens[0])
                .success(function(data) {
                       $ionicLoading.hide();
                 })

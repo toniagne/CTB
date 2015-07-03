@@ -91,7 +91,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-downloads.html',
-          controller: 'Principal'
+          controller: 'Principal2'
         }
       }
     })
