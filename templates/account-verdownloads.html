@@ -1,0 +1,22 @@
+ 
+
+<ion-view>
+<div class="bar bar-header" style='background-image: url("img/fundo-conheca.png"); background-size: 100% 120%;'>  
+</div>
+
+  <ion-content class="padding" style='background-image: url("img/fundotexto.jpg"); width:100%; height: 100%; text-align:center; background-size: 100% 100%;'> 
+    <h4>Publicações</h4>
+
+
+<div class="list"> 
+
+        <a  ng-repeat="documento in documentos" href="#/tab/account/downloads/6" class="item  item-icon-right" href="#">
+          {{documento.strNome}}
+          <i class="icon ion-arrow-right-c"></i>
+        </a>
+ 
+    </div>
+
+
+  </ion-content>
+</ion-view>

@@ -88,8 +88,30 @@ angular.module('starter.controllers', ['ionic'])
 })
 
 
-.controller('Principal', function($scope, $stateParams, Chats) {
-   
+.controller('Principal', function($scope, $stateParams, Chats, $ionicLoading, $http) {
+    $ionicLoading.show({
+    content: 'Loading',
+    animation: 'fade-in',
+    showBackdrop: true,
+    maxWidth: 200,
+    showDelay: 0
+  });
+    
+   $http.get('http://www.ctb.org.br/mobile/backend/ctb/carregadocumentos/'+$stateParams.idDocumento)
+               .success(function(data) {
+                      $ionicLoading.hide();
+                })
+               .error(function(data) {
+                      $ionicLoading.hide();
+                  return $ionicPopup.alert({
+                       title: 'ATENÇÃO.',
+                       template: 'Seu dispositivo não esta conectado na internet.'
+                     });
+                })
+               .then(        
+                function(res){ 
+                  $scope.documentos  = res.data;              
+                });  
 })
 
 .controller('ListaNoticias', function($scope, $stateParams, Chats, $http, $ionicPopup, $ionicLoading) {

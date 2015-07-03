@@ -95,6 +95,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    .state('tab.account-downloadsvisualizar', {
+      url: '/account/downloads/:idDocumento',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/account-verdownloads.html',
+          controller: 'Principal'
+        }
+      }
+    })
     .state('tab.account-secretarias', {
       url: '/account/secretarias',
       views: {
@@ -150,6 +159,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+ 
 
 
   .state('tab.principal', {
