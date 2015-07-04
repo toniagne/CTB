@@ -211,6 +211,12 @@ angular.module('starter.controllers', ['ionic'])
 
 })
 
+.controller('Actb', function($scope, $stateParams, Chats) {
+ 
+
+
+})
+
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true

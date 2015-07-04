@@ -73,7 +73,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-detail.html',
-          controller: 'Principal'
+          controller: 'Actb'
         }
       }
     })
@@ -82,7 +82,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-estaduais.html',
-          controller: 'Principal'
+          controller: 'Actb'
         }
       }
     })
@@ -128,7 +128,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-contato.html',
-          controller: 'Principal'
+          controller: 'Actb'
         }
       }
     })
@@ -138,7 +138,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-principios.html',
-          controller: 'Principal'
+          controller: 'Actb'
         }
       }
     })
@@ -147,7 +147,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-plano.html',
-          controller: 'Principal'
+          controller: 'Actb'
         }
       }
     })
@@ -156,7 +156,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-filiacao.html',
-          controller: 'Principal'
+          controller: 'Actb'
         }
       }
     })
@@ -165,7 +165,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/account-direcao.html',
-          controller: 'Principal'
+          controller: 'Actb'
         }
       }
     })
