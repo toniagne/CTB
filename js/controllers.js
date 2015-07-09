@@ -90,6 +90,7 @@ angular.module('starter.controllers', ['ionic'])
 })
 
 .controller('Secretarias', function($scope, $stateParams, Chats, $ionicLoading, $http) {
+  
    $ionicLoading.show({
     content: 'Loading',
     animation: 'fade-in',
