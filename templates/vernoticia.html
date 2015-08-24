@@ -1,18 +1,13 @@
  
 
-<ion-view view-title="Notícia" >
+<ion-view view-title="" >
   <ion-content> 
-
-<div class="list card">
+ <img ng-src="http://portalctb.org.br/site/{{chat.imagem}}" class="full-image">
+ 
 
   <div class="item tabs tabs-secondary tabs-icon-left"> 
     <a title="Curta Nosso Link"  class="tab-item"
-      href="http://www.facebook.com/plugins/like.php?href=http://portalctb.org.br/site/noticias/{{chat.categoria}}/{{chat.id}}&amp;
-      layout=standard&amp;
-      show_faces=false&amp;
-      width=450&amp;
-      action=like&amp;
-      colorscheme=light&amp;">
+      onclick="window.plugins.socialsharing.shareViaFacebook('{{chat.strNome}}', null /* 'http://portalctb.org.br/site/{{chat.imagem}}'' */, null /* 'http://portalctb.org.br/'' */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">
       <i class="icon ion-thumbsup"></i>
       Curtir
     </a>
@@ -27,21 +22,17 @@
       <i class="icon ion-share"></i>
       Compartilhar
     </a>
-    <a class="tab-item" href="#">
-      <i class="icon ion-social-whatsapp"></i>
-      Whatsapp
-    </a>
 
   </div>
 
 
-  <div class="item"> 
-    <h2>{{chat.strNome}}</h2>
+  <div class="item item-text-wrap"> 
+    <h2><b>{{chat.strNome}}</b></h2>
     <p>{{chat.categoria}}</p>
   </div>
 
   <div class="item item-body"> 
-    <img ng-src="http://portalctb.org.br/site/{{chat.imagem}}" class="full-image">
+   
 
  
     <p align="justify">
@@ -50,8 +41,7 @@
   </div>
 
   
-
-</div>
+ 
 
 
 

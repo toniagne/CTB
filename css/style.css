@@ -6,6 +6,7 @@
   -o-transition: 0.50s;
   transition: 0.50s;
 }
+
 .opacity85{ 
   opacity: 0.85; 
   filter: alpha(opacity=85); 
@@ -95,11 +96,21 @@ body { background-color:#000000;}
             background-color: #000000;  }
 
 .pane {
-    background-color: #333;
+    background-color: #008B00;
+}
+.full-image{
+  margin-top: -50px;
 }
 
 .texto {
   color: #373435;
+}
+ 
+.bar.bar-light {
+  background: none; !important; /* or transparent, or background:none */
+}
+.scroll-content {
+  overflow: visible !important;
 }
 
 .bar.bar-dark {
